@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="theme-color" content="#000000">
+    <meta name="description" content="Gira. O toca-discos inteligente, open-source e impresso em 3D. Imprima, monte e ouça.">
+    <title>Gira — O toca-discos inteligente impresso em 3D</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- ============== NAVBAR ============== -->
+    <header class="nav" id="nav">
+        <div class="nav__inner">
+            <a href="#top" class="nav__brand" aria-label="Gira home">
+                <span class="nav__logo">G<span class="dot">·</span>I<span class="dot">·</span>R<span class="dot">·</span>A</span>
+            </a>
+            <nav class="nav__links" aria-label="Navegação principal">
+                <a href="#filosofia">Open Source</a>
+                <a href="#features">Recursos</a>
+                <a href="#anatomia">Anatomia</a>
+                <a href="#construir">Construir</a>
+            </nav>
+            <a class="nav__cta" href="https://github.com" target="_blank" rel="noopener">GitHub →</a>
+            <button class="nav__menu" id="menuBtn" aria-label="Abrir menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+        <div class="nav__mobile" id="navMobile" hidden>
+            <a href="#filosofia">Open Source</a>
+            <a href="#features">Recursos</a>
+            <a href="#anatomia">Anatomia</a>
+            <a href="#construir">Construir</a>
+            <a href="https://github.com" target="_blank" rel="noopener">GitHub →</a>
+        </div>
+    </header>
+
+    <main id="top">
+
+        <!-- ============== HERO ============== -->
+        <section class="hero">
+            <div class="hero__glow" aria-hidden="true"></div>
+            <div class="hero__content reveal">
+                <p class="eyebrow">Apresentamos</p>
+                <h1 class="hero__title">
+                    Gira.<br>
+                    <span class="gradient-text">O toca-discos inteligente impresso em 3D.</span>
+                </h1>
+                <p class="hero__sub">
+                    Movido por ESP32-C3. Controlado pelo navegador. Som de vinil.<br>
+                    Você imprime, você monta, você ouve.
+                </p>
+                <div class="hero__ctas">
+                    <a class="btn btn--primary" href="#construir">Baixar arquivos .STL</a>
+                    <a class="btn btn--ghost" href="https://github.com" target="_blank" rel="noopener">Ver código no GitHub →</a>
+                </div>
+            </div>
+            <div class="hero__media reveal">
+                <div class="hero__image-wrap">
+                    <img src="assets/images/20260425_233426.jpg" alt="Toca-discos Gira em funcionamento com vinil e braço de leitura impresso em 3D na cor laranja." loading="eager">
+                </div>
+            </div>
+            <div class="hero__scroll" aria-hidden="true">
+                <span></span>
+            </div>
+        </section>
+
+        <!-- ============== MARQUEE / KEYWORDS ============== -->
+        <section class="marquee" aria-hidden="true">
+            <div class="marquee__track">
+                <span>ESP32-C3</span><span class="dot-sep">·</span>
+                <span>TMC2209 Silencioso</span><span class="dot-sep">·</span>
+                <span>NEMA17</span><span class="dot-sep">·</span>
+                <span>MT6701 Magnético</span><span class="dot-sep">·</span>
+                <span>WebSockets</span><span class="dot-sep">·</span>
+                <span>OTA Updates</span><span class="dot-sep">·</span>
+                <span>33⅓ &amp; 45 RPM</span><span class="dot-sep">·</span>
+                <span>PWA Embarcada</span><span class="dot-sep">·</span>
+                <span>Open Source</span><span class="dot-sep">·</span>
+                <span>Impressão 3D</span><span class="dot-sep">·</span>
+                <span>PlatformIO</span><span class="dot-sep">·</span>
+                <span>LittleFS</span><span class="dot-sep">·</span>
+            </div>
+        </section>
+
+        <!-- ============== FILOSOFIA OPEN SOURCE ============== -->
+        <section class="section section--open" id="filosofia">
+            <div class="container">
+                <div class="block reveal">
+                    <p class="eyebrow">Filosofia</p>
+                    <h2 class="h-display">
+                        100% aberto.<br>
+                        <span class="muted">Do parafuso ao firmware.</span>
+                    </h2>
+                    <p class="lead">
+                        Gira não é um produto que você compra. É um projeto que você constrói.
+                        Cada peça plástica, cada conexão eletrônica e cada linha de código está
+                        disponível livremente. Baixe, modifique, melhore — e compartilhe de volta.
+                    </p>
+                </div>
+
+                <div class="open-grid">
+                    <article class="open-card reveal">
+                        <div class="open-card__num">01</div>
+                        <h3>Imprima</h3>
+                        <p>Arquivos <code>.stl</code> prontos para sua impressora FDM. Sem suportes complicados, sem peças exóticas.</p>
+                    </article>
+                    <article class="open-card reveal">
+                        <div class="open-card__num">02</div>
+                        <h3>Monte</h3>
+                        <p>Esquema eletrônico documentado, com componentes acessíveis e disponíveis em qualquer loja de eletrônica.</p>
+                    </article>
+                    <article class="open-card reveal">
+                        <div class="open-card__num">03</div>
+                        <h3>Grave</h3>
+                        <p>Firmware open-source pronto para gravar no microcontrolador. Personalize comportamento, calibração e interface.</p>
+                    </article>
+                    <article class="open-card reveal">
+                        <div class="open-card__num">04</div>
+                        <h3>Ouça</h3>
+                        <p>Coloque seu vinil favorito. O motor inicia, o braço desce, a música começa.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============== FEATURES (SMART SIDE) ============== -->
+        <section class="section section--features" id="features">
+            <div class="container">
+                <header class="section__head reveal">
+                    <p class="eyebrow">The Smart Side</p>
+                    <h2 class="h-display">
+                        Inteligente onde<br>
+                        <span class="gradient-text">você não esperava.</span>
+                    </h2>
+                    <p class="lead">
+                        Por dentro, Gira tem um microcontrolador que faz o que nenhum toca-discos clássico faz:
+                        controle preciso pelo celular, calibração por software e modos de operação personalizáveis.
+                    </p>
+                </header>
+
+                <div class="feature-grid">
+
+                    <article class="feature feature--hero reveal">
+                        <div class="feature__media feature__media--app">
+                            <img src="assets/images/Screenshot_20260502_113824_Chrome.jpg" alt="Aplicativo web do Gira mostrando controle de motor, RPM, lift e modo de operação.">
+                        </div>
+                        <div class="feature__body">
+                            <p class="eyebrow eyebrow--accent">Interface Web</p>
+                            <h3>Controle pelo navegador.<br><span class="muted">Sem app. Sem nuvem.</span></h3>
+                            <p>Conecte-se ao Wi-Fi local e controle tudo direto do navegador do seu celular. Liga o motor, ajusta a rotação, sobe e desce o braço. Tudo offline, tudo seu.</p>
+                        </div>
+                    </article>
+
+                    <article class="feature feature--rpm reveal">
+                        <div class="feature__body">
+                            <p class="eyebrow eyebrow--accent">Rotação Silenciosa</p>
+                            <h3>33⅓ &amp; 45 RPM<br><span class="muted">via TMC2209.</span></h3>
+                            <p>Motor de passo NEMA17 controlado em microstepping com <code>StealthChop2</code>. Praticamente inaudível. Rampas suaves de aceleração e desaceleração.</p>
+                        </div>
+                        <div class="feature__viz feature__viz--rpm">
+                            <div class="rpm-pill rpm-pill--on">33⅓</div>
+                            <div class="rpm-pill">45</div>
+                        </div>
+                    </article>
+
+                    <article class="feature feature--lift reveal">
+                        <div class="feature__body">
+                            <p class="eyebrow eyebrow--accent">Sensor Magnético</p>
+                            <h3>Leitura angular absoluta.</h3>
+                            <p>Sensor MT6701 monitora o ângulo do braço em tempo real via I²C. Gira detecta o início do disco, o fim do lado — e nunca arranha o vinil.</p>
+                        </div>
+                        <div class="feature__viz feature__viz--lift">
+                            <div class="lift-dial">
+                                <span class="lift-dial__num">107°</span>
+                                <span class="lift-dial__label">posição atual</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="feature feature--mode reveal">
+                        <div class="feature__body">
+                            <p class="eyebrow eyebrow--accent">Modos</p>
+                            <h3>Manual ou Automático.</h3>
+                            <p>No automático, o lift desce a agulha após o tempo de debounce, toca o lado inteiro e suspende o braço ao detectar o fim. No manual, você comanda.</p>
+                        </div>
+                        <div class="feature__viz feature__viz--mode">
+                            <div class="mode-toggle">
+                                <div class="mode-toggle__opt active">Manual</div>
+                                <div class="mode-toggle__opt">Automático</div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="feature feature--cal reveal">
+                        <div class="feature__body">
+                            <p class="eyebrow eyebrow--accent">Wi-Fi &amp; OTA</p>
+                            <h3>Configura sozinho.<br><span class="muted">Atualiza pelo ar.</span></h3>
+                            <p>No primeiro boot, Gira cria a rede <code>TocaDiscos_Setup</code> e abre um portal cativo para você inserir o Wi-Fi. Depois, atualizações de firmware via OTA — sem cabo.</p>
+                        </div>
+                        <div class="feature__viz feature__viz--cal">
+                            <div class="slider-mock">
+                                <div class="slider-mock__track"><div class="slider-mock__thumb" style="left:90%"></div></div>
+                                <div class="slider-mock__track"><div class="slider-mock__thumb" style="left:65%"></div></div>
+                                <div class="slider-mock__track"><div class="slider-mock__thumb" style="left:40%"></div></div>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ============== ANATOMIA ============== -->
+        <section class="section section--anatomy" id="anatomia">
+            <div class="container">
+                <header class="section__head reveal">
+                    <p class="eyebrow">Anatomia</p>
+                    <h2 class="h-display">
+                        Três camadas.<br>
+                        <span class="gradient-text">Um toca-discos.</span>
+                    </h2>
+                    <p class="lead">
+                        Tudo o que você precisa para construir o seu Gira está dividido em três frentes —
+                        e cada uma delas é 100% aberta.
+                    </p>
+                </header>
+
+                <div class="anatomy-tabs reveal" role="tablist">
+                    <button class="anatomy-tab active" data-tab="print" role="tab" aria-selected="true">01 — Impressão 3D</button>
+                    <button class="anatomy-tab" data-tab="elec" role="tab" aria-selected="false">02 — Eletrônica</button>
+                    <button class="anatomy-tab" data-tab="firm" role="tab" aria-selected="false">03 — Firmware</button>
+                </div>
+
+                <div class="anatomy-panels">
+
+                    <div class="anatomy-panel active" id="panel-print" role="tabpanel">
+                        <div class="anatomy-panel__media">
+                            <img src="assets/images/Projeto1.png" alt="Renderização CAD do mecanismo do Gira mostrando engrenagens, braço e motor.">
+                        </div>
+                        <div class="anatomy-panel__body">
+                            <p class="eyebrow eyebrow--accent">Impressão 3D</p>
+                            <h3>Arquivos <code>.stl</code> prontos para imprimir.</h3>
+                            <ul class="check-list">
+                                <li>Chassi, base e braço modulares</li>
+                                <li>Sistema de engrenagens impressas</li>
+                                <li>Compatível com impressoras FDM padrão (200×200mm)</li>
+                                <li>Filamento sugerido: PLA ou PETG</li>
+                            </ul>
+                            <a class="btn btn--primary btn--sm" href="#construir">Baixar arquivos .STL</a>
+                        </div>
+                    </div>
+
+                    <div class="anatomy-panel" id="panel-elec" role="tabpanel">
+                        <div class="anatomy-panel__media">
+                            <img src="assets/images/20260425_233436.jpg" alt="Close do mecanismo eletrônico do Gira mostrando motor, engrenagens e braço.">
+                        </div>
+                        <div class="anatomy-panel__body">
+                            <p class="eyebrow eyebrow--accent">Eletrônica</p>
+                            <h3>Stack moderna, componentes acessíveis.</h3>
+                            <ul class="check-list">
+                                <li>Seeed Studio XIAO ESP32-C3 (Wi-Fi nativo)</li>
+                                <li>Driver TMC2209 — comunicação UART</li>
+                                <li>Motor NEMA17 para o prato</li>
+                                <li>Sensor magnético MT6701 (I²C) para o braço</li>
+                                <li>Micro servo para o lift do tonearm</li>
+                            </ul>
+                            <a class="btn btn--ghost btn--sm" href="#construir">Ver esquema de conexão →</a>
+                        </div>
+                    </div>
+
+                    <div class="anatomy-panel" id="panel-firm" role="tabpanel">
+                        <div class="anatomy-panel__media">
+                            <img src="assets/images/Screenshot_20260502_113824_Chrome.jpg" alt="Interface web do firmware Gira em modo escuro.">
+                        </div>
+                        <div class="anatomy-panel__body">
+                            <p class="eyebrow eyebrow--accent">Firmware</p>
+                            <h3>Open source. Atualizável. Hackeável.</h3>
+                            <ul class="check-list">
+                                <li>PlatformIO + Arduino framework</li>
+                                <li>PWA embarcada via LittleFS</li>
+                                <li>WebSockets para telemetria em tempo real</li>
+                                <li>Acesso em <code>tocadiscos.local</code> via mDNS</li>
+                                <li>OTA, Telnet debug e persistência em NVS</li>
+                            </ul>
+                            <a class="btn btn--ghost btn--sm" href="#construir">Ver código →</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ============== CTA / BUILD YOUR OWN ============== -->
+        <section class="section section--cta" id="construir">
+            <div class="container">
+                <div class="cta-card reveal">
+                    <p class="eyebrow eyebrow--accent">Construa o seu</p>
+                    <h2 class="h-display">Pronto para girar?</h2>
+                    <p class="lead">
+                        Tudo de que você precisa — arquivos 3D, esquema eletrônico, firmware e instruções —
+                        está em um único repositório no GitHub. Open source, sempre.
+                    </p>
+                    <div class="cta-buttons">
+                        <a class="btn btn--primary" href="https://github.com" target="_blank" rel="noopener">Ver repositório no GitHub →</a>
+                        <a class="btn btn--ghost" href="#top">Voltar ao topo</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ============== FOOTER ============== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__brand">
+                    <span class="nav__logo">G<span class="dot">·</span>I<span class="dot">·</span>R<span class="dot">·</span>A</span>
+                    <p>Um toca-discos open-source, impresso em 3D e inteligente.</p>
+                </div>
+                <div class="footer__col">
+                    <h4>Projeto</h4>
+                    <a href="https://github.com" target="_blank" rel="noopener">GitHub</a>
+                    <a href="#construir">Arquivos .STL</a>
+                    <a href="#construir">Firmware</a>
+                </div>
+                <div class="footer__col">
+                    <h4>Site</h4>
+                    <a href="#filosofia">Open Source</a>
+                    <a href="#features">Recursos</a>
+                    <a href="#anatomia">Anatomia</a>
+                </div>
+                <div class="footer__col">
+                    <h4>Licença</h4>
+                    <a href="https://opensource.org/licenses/MIT" target="_blank" rel="noopener">MIT License</a>
+                    <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>© <span id="year"></span> Gira — Hardware e software livres. Feito com vinil e código.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
