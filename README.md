@@ -26,18 +26,22 @@ This repository contains the firmware for a **Smart Record Player** project base
 * **Integrated Servo Motor**: Actuates the tonearm lift mechanism, ensuring the stylus is lowered or raised with mechanical precision and safety.
 * **Integrated Operation**: When moving the tonearm towards the platter, after a safe delay (programmable debounce), the motor turns on and the stylus descends smoothly. When the final limit of the record is detected, the stylus lifts and the rotation stops.
 
-### 4. Web Interface and Monitoring
+### 4. Anti-Skating Compensation
+* **Counterweight System**: Uses a system of counterweights and micro-adjustments to calibrate anti-skating compensation.
+* **Precise Calibration**: Maintains the stylus centered in the vinyl groove, reducing uneven cartridge wear and improving playback fidelity.
+
+### 5. Web Interface and Monitoring
 * **Web App (Internal Hosting)**: PWA application (HTML/JS/CSS) entirely stored on the microcontroller itself thanks to LittleFS.
 * **Real-time WebSockets**: Continuous bidirectional telemetry communication, showing current speed, tonearm angle, and lift status on your browser or smartphone screen.
 * **Control Modes**: Switch between **Automatic** or **Manual** mode without needing to change code.
 
-### 5. Smart WiFi Setup (Access Point Mode)
+### 6. Smart WiFi Setup (Access Point Mode)
 * **Zero Hardcoded Credentials**: WiFi SSID and password are never stored in the source code — credentials are saved securely in the ESP32's NVS (Non-Volatile Storage).
 * **Auto Access Point**: On first boot (or if the saved network is unreachable), the device automatically creates an open Wi-Fi hotspot named `TocaDiscos_Setup`.
 * **Captive Configuration Portal**: Connect to `TocaDiscos_Setup` and navigate to `http://192.168.4.1` — the device serves a setup page to enter your home Wi-Fi credentials. After saving, the ESP32 reboots and connects automatically.
 * **Runtime Reconfiguration**: Once on your home network, the Wi-Fi settings can be updated anytime from the `config.html` page without reflashing the firmware.
 
-### 6. Modern System and Connectivity
+### 7. Modern System and Connectivity
 * **OTA (Over-The-Air)**: Ability to remotely update firmware over the Wi-Fi network, without needing a USB cable connected after the device is assembled.
 * **Telnet Debug**: Embedded Telnet server on port 23 acting as a virtual serial monitor for practical diagnostics and tracking.
 * **Data Persistence**: Fine settings like servo max/min limits and debounce time are permanently recorded in the NVS memory.

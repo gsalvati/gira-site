@@ -468,7 +468,8 @@ code { font-family: 'SF Mono', Menlo, monospace; font-size: 0.9em; }
         grid-template-areas:
             "hero hero"
             "rpm  lift"
-            "mode cal";
+            "mode cal"
+            "skating skating";
     }
 }
 
@@ -496,6 +497,7 @@ code { font-family: 'SF Mono', Menlo, monospace; font-size: 0.9em; }
     .feature--lift { grid-area: lift; }
     .feature--mode { grid-area: mode; }
     .feature--cal  { grid-area: cal;  }
+    .feature--skating { grid-area: skating; flex-direction: row; align-items: center; min-height: 400px; padding: 56px; }
 }
 
 .feature__body { flex: 1; }
@@ -637,6 +639,48 @@ code { font-family: 'SF Mono', Menlo, monospace; font-size: 0.9em; }
     background: var(--accent);
     border-radius: 50%;
     box-shadow: 0 0 0 4px rgba(255,107,31,0.18);
+}
+
+/* Skating dial */
+.feature__viz--skating { padding: 24px 0 0; }
+.skating-dial {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    background:
+        radial-gradient(circle at 50% 50%, rgba(255,107,31,0.08), transparent 70%),
+        var(--surface);
+    border: 1px solid var(--border-strong);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.skating-dial::before {
+    content: "";
+    position: absolute;
+    inset: -1px;
+    border-radius: 50%;
+    background: conic-gradient(var(--accent) 0deg, var(--accent) 180deg, transparent 180deg);
+    mask: radial-gradient(circle, transparent 65%, #000 67%, #000 100%);
+    -webkit-mask: radial-gradient(circle, transparent 65%, #000 67%, #000 100%);
+    opacity: 0.85;
+}
+.skating-dial__num {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--text);
+    letter-spacing: -0.02em;
+    position: relative;
+}
+.skating-dial__label {
+    font-size: 0.75rem;
+    color: var(--text-dim);
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    margin-top: 4px;
+    position: relative;
 }
 
 /* ==========================================================
