@@ -85,15 +85,20 @@ async function processImages() {
             const relOrig = path.relative(DIST_DIR, origPath).replace(/\\/g, '/');
             const relThumb = path.relative(DIST_DIR, thumbPath).replace(/\\/g, '/');
             
-            // Only replace src= (not data-full= or other attributes)
-            // Match src="path/to/image.jpg" but not data-full="..."
-            // Using a regex that looks for src= followed by the image path
-            const srcRegex = new RegExp(`src="([^"]*${relOrig.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})"`, 'g');
+            // Escape special regex characters in the path
+            const escapedOrig = relOrig.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
             
-            const newContent = content.replace(srcRegex, (match, capture) => {
-                // Replace the captured image path with the thumb path
-                return match.replace(relOrig, relThumb);
-            });
+            // Match src="path" (with quotes) - typically when path has spaces
+            const srcRegexQuoted = new RegExp(`src="(${escapedOrig})"`, 'g');
+            
+            // Match src=path (without quotes) - typically when path has no spaces
+            const srcRegexUnquoted = new RegExp(`src=(${escapedOrig})(\\s|>|/)`, 'g');
+            
+            // Replace quoted src
+            let newContent = content.replace(srcRegexQuoted, `src="${relThumb}"`);
+            
+            // Replace unquoted src
+            newContent = newContent.replace(srcRegexUnquoted, `src=${relThumb}$2`);
             
             if (newContent !== content) {
                 content = newContent;
