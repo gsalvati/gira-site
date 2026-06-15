@@ -62,6 +62,28 @@ module.exports = (env, argv) => {
       }),
       new HtmlWebpackPlugin({
         template: './index.html',
+        filename: 'index.html',
+        chunks: ['main'],
+        minify: isProduction ? {
+          removeComments: true,
+          collapseWhitespace: true,
+          removeAttributeQuotes: true,
+        } : false,
+      }),
+      new HtmlWebpackPlugin({
+        template: './index.pt.html',
+        filename: 'index.pt.html',
+        chunks: ['main'],
+        minify: isProduction ? {
+          removeComments: true,
+          collapseWhitespace: true,
+          removeAttributeQuotes: true,
+        } : false,
+      }),
+      new HtmlWebpackPlugin({
+        template: './index.es.html',
+        filename: 'index.es.html',
+        chunks: ['main'],
         minify: isProduction ? {
           removeComments: true,
           collapseWhitespace: true,
