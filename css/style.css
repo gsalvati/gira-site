@@ -923,6 +923,34 @@ code { font-family: 'SF Mono', Menlo, monospace; font-size: 0.9em; }
     transition: transform .6s var(--ease-out);
 }
 
+/* Mini gallery inside Web Interface feature */
+.app-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-top: 24px;
+}
+.app-gallery__thumb {
+    aspect-ratio: 9 / 19;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    cursor: zoom-in;
+    transition: transform .25s var(--ease), border-color .25s var(--ease), box-shadow .25s var(--ease);
+}
+.app-gallery__thumb:hover {
+    transform: translateY(-2px) scale(1.03);
+    border-color: var(--accent);
+    box-shadow: 0 8px 24px -8px var(--accent-glow);
+    z-index: 1;
+}
+
+@media (min-width: 768px) {
+    .app-gallery { grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 28px; }
+}
+@media (max-width: 480px) {
+    .app-gallery { grid-template-columns: repeat(3, 1fr); gap: 8px; }
+}
+
 /* ==========================================================
    GALLERY MODAL
    ========================================================== */
