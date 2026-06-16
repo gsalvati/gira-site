@@ -68,5 +68,8 @@ According to the project mapping:
 2. Make sure to run the **Upload Filesystem Image** task (in the PlatformIO menu) to send the `data/` folder containing the web interface and WiFi setup page to the ESP32's LittleFS.
 3. Run the **Build** and then **Upload** the application via cable.
 4. On first boot, the device will emit an open Wi-Fi network: **`Gira_Setup`**.
-5. Connect to it and open `http://192.168.4.1` in your browser to enter your home Wi-Fi credentials.
-6. After saving, the device will reboot and connect to your network. Access it at `http://tocadiscos.local` or by its assigned IP.
+
+## Parts table
+https://docs.google.com/spreadsheets/d/1DH3MShANGawG8d4KO9uBYV9UQYiqePDWHLqd95WYZTI/edit?usp=sharing
+6. Connect to it and open `http://192.168.4.1` in your browser to enter your home Wi-Fi credentials.
+7. After saving, the device will reboot and connect to your network. Access it at `http://tocadiscos.local` or by its assigned IP.
