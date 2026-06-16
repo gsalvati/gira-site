@@ -70,3 +70,8 @@ According to the project mapping:
 4. On first boot, the device will emit an open Wi-Fi network: **`Gira_Setup`**.
 5. Connect to it and open `http://192.168.4.1` in your browser to enter your home Wi-Fi credentials.
 6. After saving, the device will reboot and connect to your network. Access it at `http://tocadiscos.local` or by its assigned IP.
+
+
+## Parts
+
+https://docs.google.com/spreadsheets/d/1DH3MShANGawG8d4KO9uBYV9UQYiqePDWHLqd95WYZTI/?usp=sharing
