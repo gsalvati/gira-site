@@ -15,7 +15,7 @@
     "open-source"
   ],
   "author": "Gian Carlo Salvati",
-  "license": "MIT",
+  "license": "GPL-3.0",
   "devDependencies": {
     "copy-webpack-plugin": "^14.0.0",
     "css-loader": "^6.8.1",
