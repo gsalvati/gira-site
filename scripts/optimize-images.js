@@ -51,6 +51,7 @@ async function processImages() {
             const thumbHeight = isApp ? 400 : 400;
 
             await sharp(imgPath)
+                .rotate()
                 .resize(thumbWidth, thumbHeight, { 
                     fit: isApp ? 'cover' : 'cover',
                     position: 'center'
